@@ -33,7 +33,8 @@ public class TestController {
 			HttpServletRequest request, HttpServletResponse response) {
 		logger.debug("Received request for test controller with data : {}", data);
 		model.put("adminName", properties.getAdminName());
-		model.put("dara", data);
+		//Path variables are automatically added to Model (Spring 3.1+)
+		//model.put("data", data);
 		return "test";
 		
 	}
